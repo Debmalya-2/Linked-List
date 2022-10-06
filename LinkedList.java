@@ -6,7 +6,7 @@ To add data in Singly Linked List and perform operations like
 */
 
 public class LinkedList{
-    Node head;
+    Node head
     int size=0;                             //To store size of the linked list
     
     class Node{
