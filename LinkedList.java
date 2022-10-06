@@ -1,6 +1,14 @@
+/**
+To add data in Singly Linked List and perform operations like
+- Insertion(front/rear)
+- Deletion(front/rear)
+- Reverse(Iterative approach)
+*/
+
 public class LinkedList{
     Node head;
-    int size=0;
+    int size=0;                             //To store size of the linked list
+    
     class Node{
         String data;
         Node next;
@@ -11,6 +19,7 @@ public class LinkedList{
         }
     }
 
+    /* To add element from front of the list */
     public void addFirst(String data){
         Node newNode = new Node(data);
         if(head == null){
@@ -21,6 +30,7 @@ public class LinkedList{
         head = newNode;
     }
 
+    /* To add element from rear of the list */
     public void addLast(String data){
         Node newNode = new Node(data);
         if(head == null){
@@ -34,6 +44,7 @@ public class LinkedList{
         currNode.next = newNode;
     }
 
+    /* To print all nodes from the list */
     public void printList(){
         if(head == null){
             System.out.println("No LinkedList exits");
@@ -47,6 +58,7 @@ public class LinkedList{
         System.out.println("NULL");
     }
 
+    /* To delete element from front of the list */
     public void delFirst(){
         if(head == null){
             System.out.println("No element present");
@@ -56,6 +68,7 @@ public class LinkedList{
         head = head.next;
     }
 
+    /* To delete element from rear of the list */
     public void delLast(){
         if(head == null){
             System.out.println("No element present");
@@ -75,10 +88,12 @@ public class LinkedList{
         secondLast.next = null;
     }
 
+    /* To return size of the list */
     public int sizeList(){
         return size;
     }
 
+    /* To reverse the list in Iterative approach */
     public void revListIterative(){
         if(head == null || head.next == null){
             return;
